@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_login/constants/constants.dart';
+import 'package:new_login/ui/Homescreen.dart';
 import 'package:new_login/ui/widgets/custom_shape.dart';
 import 'package:new_login/ui/widgets/responsive_ui.dart';
 import 'package:new_login/ui/widgets/textformfield.dart';
@@ -214,9 +215,11 @@ class _SignInScreenState extends State<SignInScreen> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
       onPressed: () {
         print("Routing to your account");
-        Scaffold
-            .of(context)
-            .showSnackBar(SnackBar(content: Text('Login Successful')));
+        //Scaffold
+           // .of(context)
+            //.showSnackBar(SnackBar(content: Text('Login Successful')));
+        Navigator.push((context), MaterialPageRoute(
+            builder: (context) => HomeScreenPage()));
 
       },
       textColor: Colors.white,
